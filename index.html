@@ -419,22 +419,23 @@
                 </ul>
                 </div>
                 <div class="subscrible-container">
-                    <label class="subscrible-title" for="subscrible-email">Subscribe</label>
-                    <div class="subscrible-input-container">
-                        <input class="subscrible-email" name="email" type="email"
-                    id="subscrible-email" placeholder="E-mail">
+                    <p class="subscrible-title">Subscribe</p>
+                    <form class="subscrible-input-form">
+                        <label  class="subscrible-label">
+                            <input class="subscrible-email" name="email" type="email" id="subscrible-email" placeholder="E-mail">                            
+                        </label>
                         <button class="subscrible-btn" type="submit">Subscribe
                             <svg class="subscrible-icon" width="24" height="24">
                                 <use href="./images/icons.svg#icon-telegram"></use>
-                            </svg>                           
-                        </button>
-                    </div>
+                            </svg>
+                        </button>                        
+                    </form>
                 </div>
             </div>
             
     </footer>
 <!-- is-open -->
-    <div class="modal-overlay ">
+    <div class="modal-overlay is-open">
         <div class="modal">            
                 <button type="button" class="close-btn">
                     <svg class="close-btn-icon" width="8" height="8">
@@ -446,14 +447,14 @@
 
                     <!-- #region user-text input -->
                    <div class="modal-form-container-block">
-                        <label class="modal-form-label" for="user-text">Name
+                        <label class="modal-form-label" for="user-name">Name
                         </label>
                         <div class="modal-form-input-container">
                             <input class="modal-form-input" 
-                            name="user-text" 
+                            name="user-name" 
                             type="text" 
-                            id="user-text">
-                            <svg class="modal-form-icon" width="18" height="18">
+                            id="user-name">
+                            <svg class="modal-form-icon" width="18" height="24">
                                 <use href="./images/icons.svg#icon-person"></use>
                             </svg>
                         </div>
@@ -466,7 +467,7 @@
                     </label>
                     <div class="modal-form-input-container">
                         <input class="modal-form-input" name="phone-text" type="tel" id="phone-text">
-                        <svg class="modal-form-icon" width="18" height="18">
+                        <svg class="modal-form-icon" width="18" height="24">
                             <use href="./images/icons.svg#icon-phone"></use>
                         </svg>
                     </div>
@@ -478,7 +479,7 @@
                     </label>
                     <div class="modal-form-input-container">
                         <input class="modal-form-input" name="email-text" type="email" id="email-text">
-                        <svg class="modal-form-icon" width="18" height="18">
+                        <svg class="modal-form-icon" width="18" height="24">
                             <use href="./images/icons.svg#icon-email"></use>
                         </svg>
                     </div>
@@ -486,14 +487,14 @@
                 <!--  #endregion email-text input -->
 
                 <div class="text-area-container">
-                    <label class="modal-form-label" for="user-text-area">Comment</label>
-                    <textarea class="user-comment" name="User-comment" id="user-text-area" placeholder="Text input"></textarea>
+                    <label class="modal-form-label" for="user-comment">Comment</label>
+                    <textarea class="user-comment" name="user-comment" id="user-comment" placeholder="Text input"></textarea>
                 </div>
 
 
                 <div class="modal-form-container-chackbox">
-                    <input class="checkbox visually-hidden" type="checkbox" id="user-checkbox" >
-                    <label for="user-checkbox" class="modal-form-label-custom">
+                    <input class="checkbox visually-hidden" name="user-privacy" type="checkbox" id="user-privacy" value="true" >
+                    <label for="user-privacy" class="modal-form-label-custom">
                         <span class="custom-checkbox">
                         <svg class="checkbox-icon" width="10" height="8">
                             <use href="./images/icons.svg#icon-check-box"></use>

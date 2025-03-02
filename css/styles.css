@@ -500,8 +500,8 @@ padding: 1.5px 0;
 
 
 .subscrible-container {
-    width: 453px;
-    height: 80px;
+    /* width: 453px;
+    height: 80px; */
 }
 
 .subscrible-title { 
@@ -514,8 +514,13 @@ padding: 1.5px 0;
     margin-bottom: 16px;
 }
 
-.subscrible-input-container {
+.subscrible-input-form {
     display: flex;
+    gap: 24px;
+
+}
+.subscrible-label {
+
 }
 
 .subscrible-email {
@@ -523,11 +528,16 @@ padding: 1.5px 0;
     border-radius: 4px;
     width: 264px;
     height: 40px;
-    background-color: transparent;
-    margin-right: 24px;
+    background-color: transparent;    
     color: #fff;  
     outline: transparent;  
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);    
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
 }
 
 .subscrible-email:focus {
@@ -543,22 +553,25 @@ padding: 1.5px 0;
 }
 
 .subscrible-btn {
-    border: 0;
+    border: none;
     border-radius: 4px;
     padding: 8px 24px;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
     background-color: #4d5ae5;
     color: #fff;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em; 
     display: flex;
-    gap: 16px; 
+    justify-content: center;
+    align-items: center;    
     outline: transparent;
     transition: cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+    cursor: pointer;
+        
 }
 
 .subscrible-btn:hover,
@@ -572,6 +585,7 @@ padding: 1.5px 0;
     height: 24px;
     width: 24px;
     fill: #fff; 
+    margin-left: 16px;
 }
 
 .modal-form-iconn {
@@ -594,20 +608,19 @@ padding: 1.5px 0;
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: opacity, visibility, pointer-events;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .modal-overlay.is-open {
     opacity: 1;
     pointer-events: all;
-    visibility: visible;    
+    visibility: visible;        
 }
 
 .modal {
     width: 408px;
     min-height: 584px;
-    background-color: #fff;
+    background-color: #fcfcfc;
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     position: absolute;
@@ -615,6 +628,7 @@ padding: 1.5px 0;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 72px 24px 24px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -632,12 +646,14 @@ padding: 1.5px 0;
     align-items: center;
     padding: 0;
     line-height: 0;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
 
 .close-btn:hover,
 .close-btn:focus {
-    background-color: #404bbf;    
+    background-color: #404bbf; 
+    border: none;   
 }
 
 .close-btn:hover .close-btn-icon,
@@ -664,7 +680,9 @@ padding: 1.5px 0;
 }
 .modal-form {}
 
-.modal-form-container-block {}
+.modal-form-container-block {
+    margin-bottom: 8px;
+}
 
 .modal-form-label {    
     font-size: 12px;
@@ -691,6 +709,7 @@ padding: 1.5px 0;
     padding-left: 38px;
     outline: transparent;  
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: transparent;
       
 }
 
@@ -703,7 +722,7 @@ padding: 1.5px 0;
     top: 50%;
     left: 16px;
     transform: translateY(-50%);
-    transition: fill 250ms ease-in-out;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input:focus + .modal-form-icon {
@@ -711,7 +730,9 @@ padding: 1.5px 0;
 }
 
 
-.text-area-container {}
+.text-area-container {
+    margin-bottom: 16px;
+}
 
 .modal-form-label {
     font-size: 12px;
@@ -736,8 +757,14 @@ padding: 1.5px 0;
     height: 120px;
     padding: 8px 16px;
     outline:  transparent;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     resize: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
 }
 
 .user-comment:focus {
@@ -769,7 +796,8 @@ padding: 1.5px 0;
     border: 1px solid rgba(46, 47, 66, 0.4);
     margin-right: 8px;
     background-color: transparent;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: transparent;
 }
 
 .checkbox-icon {
@@ -778,16 +806,19 @@ padding: 1.5px 0;
 
 .checkbox:checked + .modal-form-label-custom .custom-checkbox {
     background-color: #404BBF;
+    border: none;
+    fill: #F4F4FD;;
 }
 
 .link-text {
     text-decoration: underline;
+    color: #4d5ae5;
 }
 
 .send-btn {
     border-radius: 4px;
     padding: 16px 32px;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     background-color: #4d5ae5;
     border: 0;
@@ -801,6 +832,8 @@ padding: 1.5px 0;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     display: block;
     margin: 0 auto;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Модальне вікно */
 
